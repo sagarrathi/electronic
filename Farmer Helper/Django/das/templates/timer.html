@@ -1,0 +1,10 @@
+<h1>Select date</h1>
+{% load app_filter %}
+<form action="../charter/" method="get">
+
+    {% for day in a %}
+        <input type="radio" name="Day" value="{{day|remove_trash}}">{{ day|remove_trash }}<br>
+    {% endfor %}
+        <input type="radio" name="All" value="All">All Data(not recommended)<br>
+    <input type="submit" value="Get Chart Now" name="select_day">
+</form>

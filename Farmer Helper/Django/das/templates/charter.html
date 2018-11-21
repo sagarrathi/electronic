@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript" src="../static/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../static/jquery.flot.js"></script>
+        <script type="text/javascript" src="../static/jquery.flot.time.js"></script>
+        <script language="javascript" type="text/javascript" src="../static/jquery.flot.axislabels.js"></script>
+
+
+    </head>
+    <!--<body background="../static/light.jpg">-->
+    <body bgcolor="#e6e6fa">
+        <h3 align="center">Displaying Chart for {{a}}</h3>
+
+        {% for chart in charts %}
+        <div id="box" align="center">
+            {{chart.as_html}}
+        </div>
+        <br><br>
+        {% endfor %}
+
+
+
+    </body>
+</html>
